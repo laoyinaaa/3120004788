@@ -20,28 +20,6 @@ public class main {
             写入题目(file, test);
             写入答案(file2);
         }
-        System.out.println("1开始校对答案,2退出");
-        int choose1=sc.nextInt();
-        if(choose1==1) {
-            try {
-                FileReader fr=new FileReader("D:\\my program of JAVA\\CreateMathTest\\src\\main\\java\\com\\example\\createmathtest\\Answers.txt");
-                BufferedReader br=new BufferedReader(fr);
-                String line="";
-                String[] arrs=null;
-                int n1=0;
-                while ((line=br.readLine())!=null) {
-                    arrs=line.split(",");
-//            System.out.println(arrs[0] + " : " + arrs[1] + " : " + arrs[2]);
-//                    System.out.println(Arrays.asList(arrs).toString());
-                    System.out.println(arrs[n1]);
-                    n1++;
-                }
-                br.close();
-                fr.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     private static File 清空答案文件() {
